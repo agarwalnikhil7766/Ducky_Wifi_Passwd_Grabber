@@ -27,4 +27,11 @@ THEN JUST DOWNLOAD THE ENCODED inject.bin AND PLACE IT IN THE SD CARD OF THE RUB
 
 
 
-ENJOY!!!!!!
+For the Wifi_Grabber_TwinDuck script, you need to have flashed the rubber ducky with the twinduck firmware before you execute this script, else this will not work.
+
+
+
+These scripts are for educational purposes only. Only use them on your devices or the devices for which you have permission. I am not responsible for any damage or harm that you cause with these scripts.
+
+
+ENJOYY!!!!
