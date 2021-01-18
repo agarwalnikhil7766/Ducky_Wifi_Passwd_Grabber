@@ -17,8 +17,11 @@ For the Wifi_Grabber_TwinDuck script, you need to have flashed the rubber ducky 
 
 WORKING OF THE SCRIPT!!
 
-The Mail script is a bit slow as it exports all the access points details and stores them in a folder in the Desktop and zips the folder. Then the zip file
-is mailed to the receiver's email address. The zip file will contain all the networks in a seperate .xml file with all its information. But not to worry the script ends with everything being cleaned.
+  The Mail script is a bit slow as it exports all the access points details and stores them in a folder in the Desktop and zips the folder. Then the zip file
+is mailed to the receiver's email address. The zip file will contain all the networks in a seperate .xml file with all its information. But not to worry the script ends with everything on the target machine being cleaned.
+  The WIFI_GRABBER_TWINDUCK is a quick script and completes its operation in just under 12 seconds. After the completion, you'll find a folder on the SD card with the victim's computer name and all wifi network with its details inside the folder.
+  
+  The Password is the content that is stored inside the .xml file between <keyMaterial>************</keyMaterial>.
 
 USAGE!!!
 
