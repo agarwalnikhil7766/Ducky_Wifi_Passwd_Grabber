@@ -17,15 +17,15 @@ For the Wifi_Grabber_TwinDuck script, you need to have flashed the rubber ducky 
 
 WORKING OF THE SCRIPT!!
 
-This script is a bit slow as it exports all the access points details and stores them in a folder in the Desktop. Then the folder is zipped and the zip file
-is mailed to the Receiver. The zip file will contain all the networks in a seperate .xml file with all its information. But not to worry the script ends with
-everything being cleaned.
+The Mail script is a bit slow as it exports all the access points details and stores them in a folder in the Desktop and zips the folder. Then the zip file
+is mailed to the receiver's email address. The zip file will contain all the networks in a seperate .xml file with all its information. But not to worry the script ends with everything being cleaned.
 
 USAGE!!!
 
 JUST COPY THE SCRIPT AND ENCODE IT WITH THE DUCKY ENCODER. I PREFER "https://ducktoolkit.com/encode", but you can use any. 
 THEN JUST DOWNLOAD THE ENCODED inject.bin AND PLACE IT IN THE SD CARD OF THE RUBBER DUCKY!!
 
+YOU CAN TWEAK WITH THE DELAY TIMING BASED ON THE VICTIM's COMPUTER SPEED.
 
 These scripts are for educational purposes only. Only use them on your devices or the devices for which you have permission. I am not responsible for any damage or harm that you cause with these scripts.
 
