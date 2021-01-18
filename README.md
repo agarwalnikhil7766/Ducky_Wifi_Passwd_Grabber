@@ -14,6 +14,7 @@ Make changes only to Sender_Email, Sender_Pass and the Reveiver_Email.
 WIFI_GRABBER_TWINDUCK
 
 For the Wifi_Grabber_TwinDuck script, you need to have flashed the rubber ducky with the twinduck firmware before you execute this script, else this will not work.
+And also change the drive name of the ducky drive to '__' . Only after this will the script work flawlessly.
 
 WORKING OF THE SCRIPT!!
 
