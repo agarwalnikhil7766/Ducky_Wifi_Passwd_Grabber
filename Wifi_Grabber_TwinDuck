@@ -12,7 +12,7 @@ STRING $path = powershell "((Get-Volume -FileSystemLabel __).DriveLetter+':\')"
 ENTER
 STRING cd $path
 ENTER
-STRING mkdir $env:UserName
+STRING if(Test-Path $path\$env:UserName){rmdir $env:UserName -Recurse; mkdir $env:UserName} else {mkdir $env:UserName}
 ENTER
 STRING cd $env:UserName
 ENTER
